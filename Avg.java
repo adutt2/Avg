@@ -21,8 +21,9 @@ public class Avg {
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     
     job.setMapperClass(AvgMapper.class);
-    job.setReducerClass(AvgReducer.class);
-
+    //job.setReducerClass(AvgReducer.class);
+    job.setReducerClass(AvgReducer2.class);
+    
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     
